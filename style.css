@@ -11,6 +11,7 @@
   .flex-column {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .absolute-center {
@@ -31,6 +32,22 @@
   .text-center ul {
     list-style-position: inside;
   }
+
+  .center-container {
+    position: relative;
+    flex: 1;
+  }
+
+  .center-container > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      max-width: 100%;
+      max-height: 100%;
+  }
+
+  padding-bottom: 2rem;
 }
 
 .slidev-layout.two-columns {
