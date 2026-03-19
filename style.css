@@ -1,0 +1,46 @@
+.slidev-layout {
+  h1 {
+    color: unset;
+  }
+
+  h1 + p {
+    opacity: 0.8;
+    font-weight: bold;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .absolute-center {
+    position: absolute;
+    top: 50%; /* Moves the top edge to the middle of the parent */
+    transform: translate(0, -50%); /* Shifts the element back by half its own width and height */
+  }
+
+  .col-left {
+    position: relative;
+  }
+
+  .col-right {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .text-center ul {
+    list-style-position: inside;
+  }
+}
+
+.slidev-layout.two-columns {
+  padding-right: 1.5rem;
+}
+
+/* .dark .slidev-layout { */
+/*   background: #333333; */
+/* } */
+
+html.dark {
+  --slidev-slide-container-background: #1e1e2e;
+}
