@@ -296,12 +296,6 @@ Part IV in this
 dissertation focuses on the measurement of the Yukawa coupling between the Higgs boson
 and the charm quark, $y_c$.
 
-Pseudorapidity $\eta$ represents the angle of a particle relative to the beam axis:
-
-$$
-\eta \equiv -\ln\left[\tan\left(\frac{\theta}{2}\right)\right]
-$$
-
 ---
 
 # LHC Higgs Boson Production
@@ -480,6 +474,12 @@ LHC Timeline
 
 Coordinate System
 
+Pseudorapidity $\eta$ represents the angle of a particle relative to the beam axis:
+
+$$
+\eta \equiv -\ln\left[\tan\left(\frac{\theta}{2}\right)\right]
+$$
+
 </div>
 <div class="center-container">
 <img border="rounded" src="./images/cms_coords.png" alt=""/>
@@ -640,20 +640,35 @@ Secondary vertices can indicate commonality of displaced tracks, useful for iden
 
 1. The anti-$k_T$ jet clustering algorithm, a widely used sequential recombination jet finding approach, begins by assigning each input particle or object (constituents) as an initial "jet" with zero radius and zero transverse momentum (pT).
 2. In each step of the iterative procedure, the algorithm computes the pair-wise distance between every pair of jets/particles, following a specific metric. The anti-$k_T$ algorithm employs the Cambridge/Aachen or "$k_T$" clustering metric with an additional parameter R, the distance parameter.
-3. For each pair of particles (i,j), the algorithm computes the anti-$k_T$ distance using the following formula:
-    d(i,j) = min(pT(i)^2, pT(j)^2) * ΔR^2 / R^2
-where pT(i) and pT(j) are transverse momenta of particles i and j, and ΔR is the distance between them in the rapidity-azimuthal angle space (ΔR = sqrt(Δy^2 + Δφ^2)).
-4. In each iteration, the pair with the smallest distance d(i,j) is merged using an exclusive "winner-takes-all" strategy where the four-momentum of the combined jet is updated as follows:
-    pT(new jet) = pT(i) + pT(j)
-    η(new jet) = (pT(i) \* η(i) + pT(j) \* η(j)) / pT(new jet)
-    φ(new jet) = (pT(i) \* φ(i) + pT(j) \* φ(j)) / pT(new jet)
-where η and φ are the pseudorapidity and azimuthal angle, respectively. The combined jet then takes the place of the two initial jets/particles in subsequent iterations.
+3. For each pair of particles $(i,j)$, the algorithm computes the anti-$k_T$ distance using the following formula:
+$$
+d_{ij} = \min(p_{T,i}^{-2}, p_{T,j}^{-2}) \frac{\Delta R_{ij}^2}{R^2}
+$$
+where $p_{T,i}, p_{T,j}$ are transverse momenta of particles $i$ and $j$, and $\Delta R$ is the distance between them in the rapidity-azimuthal angle space $\Delta R = \sqrt{\Delta y^2 + \Delta \phi^2}$.
 
 <!--
-5. The algorithm continues to merge pairs of particles or jets until there are no remaining pairs below a certain distance threshold (e.g., d(i,j) < R^2 \* pTmin^2, where pTmin is a user-defined parameter). At this point, the remaining objects/particles are declared as jets.
-6. The anti-$k_T$ algorithm tends to form narrow and collimated jets that follow the original parton direction better than other jet finding algorithms like the Cambridge/Aachen (CA) or $k_T$ algorithm. A smaller R value in anti-$k_T$ leads to more collimated jets, while a larger R results in broader jets that capture more of the event's radiation.
-
 In summary, the anti-$k_T$ algorithm merges particles with the smallest pairwise distance in each iteration until no remaining pairs fall below a specified distance threshold. This process results in well-defined and collimated jets that follow the initial parton direction closely.
+-->
+
+---
+
+# Anti-kt Algorithm
+
+4. In each iteration, the pair with the smallest distance $d_{ij}$ is merged using an exclusive "winner-takes-all" strategy where the four-momentum of the combined jet is updated as follows:
+$$
+\begin{aligned}
+p_{T,\text{new jet}} &= p_{T,i} + p_{T,j}\\
+\eta_{\text{new jet}} &= (p_{T,i} \cdot \eta_i + p_{T,j} \cdot \eta_j) / p_{T,\text{new jet}}\\
+\psi_{\text{new jet}} &= (p_{T,i} \cdot \phi_i + p_{T,j} \cdot \phi_j) / p_{T,\text{new jet}}
+\end{aligned}
+$$
+where $\eta$ and $\phi$ are the pseudorapidity and azimuthal angle, respectively. The combined jet then takes the place of the two initial jets/particles in subsequent iterations.
+
+5. The algorithm continues to merge pairs of particles or jets until there are no remaining pairs below a certain distance threshold (e.g., $d_{ij} < R^2 \cdot p_{T,\min}^2$, where $p_{T,\min}$ is a user-defined parameter). At this point, the remaining objects/particles are declared as jets.
+6. A smaller R value in anti-$k_T$ leads to more collimated jets, while a larger R results in broader jets that capture more of the event's radiation.
+
+<!--
+The anti-$k_T$ algorithm tends to form narrow and collimated jets that follow the original parton direction better than other jet finding algorithms like the Cambridge/Aachen (CA) or $k_T$ algorithm.
 -->
 
 ---
