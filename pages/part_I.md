@@ -43,7 +43,7 @@ Key components of SM
 ::right::
 
 <div class="flex-column items-center justify-center h-full">
-<img border="rounded" src="./images/sm.png" alt=""/>
+<img border="rounded" src="/part_I/sm.png" alt=""/>
 </div>
 
 ---
@@ -81,7 +81,7 @@ We will use only relevant parts
 ::right::
 
 <div class="flex-column items-center justify-center h-full">
-<img border="rounded" width="330" src="./images/full_l.jpg" alt=""/>
+<img border="rounded" width="330" src="/part_I/full_l.jpg" alt=""/>
 </div>
 
 ---
@@ -93,7 +93,7 @@ We will use only relevant parts
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/diag.png" alt=""/>
+<img border="rounded" src="/part_I/diag.png" alt=""/>
 </div>
 </div>
 
@@ -214,7 +214,7 @@ Proton-proton collisions
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/higgs_prod.png" alt=""/>
+<img border="rounded" src="/part_I/higgs_prod.png" alt=""/>
 </div>
 </div>
 
@@ -251,7 +251,7 @@ mass of the resulting particles.
 
 <div class="flex-column">
 <div class="center-container">
-<img border="rounded" src="./images/cross_sec.png" alt=""/>
+<img border="rounded" src="/part_I/cross_sec.png" alt=""/>
 </div>
 <div>
 
@@ -281,7 +281,7 @@ LHC facilities
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/lhc.png" alt=""/>
+<img border="rounded" src="/part_I/lhc.png" alt=""/>
 </div>
 </div>
 
@@ -305,7 +305,7 @@ LHC Timeline
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/timeline.png" alt=""/>
+<img border="rounded" src="/part_I/timeline.png" alt=""/>
 </div>
 </div>
 
@@ -326,7 +326,7 @@ LHC Timeline
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/cms.png" alt=""/>
+<img border="rounded" src="/part_I/cms.png" alt=""/>
 </div>
 </div>
 
@@ -356,7 +356,7 @@ $$
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/cms_coords.png" alt=""/>
+<img border="rounded" src="/part_I/cms_coords.png" alt=""/>
 </div>
 </div>
 
@@ -378,7 +378,7 @@ Inner Tracker
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/inner_tracker.png" alt=""/>
+<img border="rounded" src="/part_I/inner_tracker.png" alt=""/>
 </div>
 </div>
 
@@ -404,7 +404,7 @@ Muon Chambers
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/muon_det.png" alt=""/>
+<img border="rounded" src="/part_I/muon_det.png" alt=""/>
 </div>
 </div>
 
@@ -425,7 +425,7 @@ Muon Chambers
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/generation_pie.png" alt=""/>
+<img border="rounded" src="/part_I/generation_pie.png" alt=""/>
 </div>
 </div>
 
@@ -465,7 +465,7 @@ layout: two-cols
 ::right::
 
 <div class="flex-column items-center justify-center h-full">
-<img border="rounded" src="./images/reco.png" alt=""/>
+<img border="rounded" src="/part_I/reco.png" alt=""/>
 </div>
 
 <!--
@@ -683,6 +683,6 @@ Detailed Comparison
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/datasets.png" alt=""/>
+<img border="rounded" src="/part_I/datasets.png" alt=""/>
 </div>
 </div>

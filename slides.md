@@ -45,7 +45,7 @@ HSE CS PhD School $\bullet$ Best Dissertations Course
 
 </div>
 <div class="center-container">
-<img border="rounded" src="./images/winners.png" alt=""/>
+<img border="rounded" src="/intro/winners.png" alt=""/>
 </div>
 </div>
 
@@ -63,7 +63,7 @@ PhD from Peking University, China
   </div>
   <div class="grid-item">
 
-<img border="rounded" width="200" src="./images/author.png" alt=""/>
+<img border="rounded" width="200" src="/intro/author.png" alt=""/>
 
 </div>
   <div class="grid-item">
@@ -76,7 +76,7 @@ Peking University, China
 </div>
   <div class="grid-item">
 
-<img border="rounded" width="200" src="./images/superv.png" alt=""/>
+<img border="rounded" width="200" src="/intro/superv.png" alt=""/>
 
 </div>
 </div>
@@ -125,13 +125,13 @@ ference on Machine Learning, pp. 18281-18292. PMLR, 2022, arXiv: 2202.03772
 matrix-element matching”, Phys. Rev. D 102, 116003 (2020), arXiv: 2006.12860 [hep-ph].
 
 ---
-src: ./parts/part_I.md
+src: ./pages/part_I.md
 ---
 
 Contents here are ignored
 
 ---
-src: ./parts/part_II-III.md
+src: ./pages/part_II-III.md
 ---
 
 Contents here are ignored
