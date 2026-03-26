@@ -26,9 +26,8 @@ relations among the input features and different particles.
 -->
 
 ---
-
-<div class="flex-column">
-<div>
+layout: two-cols
+---
 
 # Rule-based Algorithms
 
@@ -41,7 +40,9 @@ Jet grooming
   - Declusters the jet and removes subjets failing a soft radiation criterion
   - Can be combined with multivariate analysis or likelihood fit for signal extraction
 
-</div>
+::right::
+
+<div class="flex-column">
 <div class="center-container">
 <img border="rounded" src="/part_II-III/Figure_3.1.png" alt=""/>
 </div>
@@ -54,9 +55,6 @@ soft emissions within a jet that come from the pileup or underlying events.
 -->
 
 ---
-
-<div class="flex-column">
-<div>
 
 # Rule-based Algorithms
 
@@ -75,6 +73,15 @@ $$\tau_N = \frac{1}{d_0} \sum_{i=1}^{M} p_{T,i} \min\{\Delta R_{i,\text{sj}_1}, 
   - Generalized ECF ratios (e.g. $N_2$) widely used for 2-prong jet tagging in CMS
   - Can be combined in multivariate approach for better discrimination
 
+---
+
+<div class="flex-column">
+<div>
+
+# Rule-based Algorithms
+
+The shape comparison for multiple resonant types of jets and QCD background jets
+
 </div>
 <div class="center-container">
 <img border="rounded" src="/part_II-III/Figure_3.2.png" alt=""/>
@@ -82,9 +89,6 @@ $$\tau_N = \frac{1}{d_0} \sum_{i=1}^{M} p_{T,i} \min\{\Delta R_{i,\text{sj}_1}, 
 </div>
 
 ---
-
-<div class="flex-column">
-<div>
 
 # Rule-based Algorithms
 
@@ -98,13 +102,10 @@ Heavy-flavour jet properties
 * CMS algorithms (JP, JBP) use track impact parameter to build jet $b$-probability
 * These techniques extend to large-$R$ jets for tagging $H \to bb$ or $H \to cc$ signatures
 
-</div>
-<div class="center-container">
-<img border="rounded" src="/part_II-III/Figure_3.3.png" alt=""/>
-</div>
-</div>
-
 ---
+
+<div class="flex-column">
+<div>
 
 # Shallow Machine-Learning Algorithms
 
@@ -115,6 +116,12 @@ Multivariate approaches combining high-level features
   - Inputs: jet kinematics, $m_\text{SD}$, $b$-tagging properties, subjet invariant masses, sphericity
   - Variables computed in multiple Lorentz-boosted rest frames
 * These approaches offer improvements but are limited by the quality of hand-crafted features
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.3.png" alt=""/>
+</div>
+</div>
 
 ---
 
@@ -142,15 +149,19 @@ Jet representation of images and sequences
 ---
 
 <div class="flex-column">
+<div>
+
+# Deep Learning Algorithms
+
+A schematic diagram of the DeepDoubleX algorithm (V2) for boosted heavyresonant 𝑋 →𝑏𝑏 and 𝑋 →𝑐𝑐 tagging
+
+</div>
 <div class="center-container">
 <img border="rounded" src="/part_II-III/Figure_3.5.png" alt=""/>
 </div>
 </div>
 
 ---
-
-<div class="flex-column">
-<div>
 
 # Deep Learning Algorithms
 
@@ -164,7 +175,14 @@ Jet representation of sets and graphs
   - Achieves major performance gains in CMS for $W/Z/H/t$ and $X \to bb/cc$ tagging
 * ParticleNet marks a turning point: **the choice of data representation is critical** for efficient and performant DNN design
 
-</div>
+---
+
+<div class="flex-column">
+
+# Deep Learning Algorithms
+
+A detailed explanation of the ParticleNet architectural design
+
 <div class="center-container">
 <img border="rounded" src="/part_II-III/Figure_3.6.png" alt=""/>
 </div>
@@ -197,9 +215,6 @@ within the network design, and the advances driven by the new architecture, Tran
 
 ---
 
-<div class="flex-column">
-<div>
-
 # Algorithms Preserving Lorentz Symmetry
 
 Symmetry preservation as inductive bias
@@ -216,6 +231,13 @@ Symmetry preservation as inductive bias
 | $x$-$t$ boost | ≈ boost along the jet axis |
 | $z$-tilt | mixture of $z$-$t$ boost with $x$-$z$ rotation |
 | $y$-tilt | mixture of $y$-$t$ boost with $y$-$z$ rotation |
+
+---
+
+<div class="flex-column">
+<div>
+
+# Algorithms Preserving Lorentz Symmetry
 
 </div>
 <div class="center-container">
@@ -275,9 +297,6 @@ constant when jets undergo a Lorentz boost, while other algorithms manifest a pe
 
 ---
 
-<div class="flex-column">
-<div>
-
 # Systematic Study: Preserving Lorentz Symmetry
 
 Quantifying the effect of different pairwise features
@@ -294,6 +313,13 @@ Pairwise variables and their symmetry invariance:
 * **Key finding**: incorporating variables invariant under more symmetry types consistently improves performance
 * Effect is **strongest with limited training data** — symmetry acts as effective data augmentation
 * Confirmed on both Top and JetClass datasets across training sizes from 6k to 100M
+
+---
+
+<div class="flex-column">
+<div>
+
+# Systematic Study: Preserving Lorentz Symmetry
 
 </div>
 <div class="center-container">
