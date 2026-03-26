@@ -6,6 +6,10 @@ layout: section
 
 ## Chapter 1. Physics
 
+<!-- 
+Chapter 1 provides the physics foundation for everything that follows. We begin with the Standard Model — its historical development from the discovery of the electron through quantum field theory to the full SM Lagrangian — and then cover the Higgs mechanism in detail, since the Higgs-charm coupling measurement is a key application of the thesis work. We then introduce the LHC and CMS detector, the tools that generate the data analyzed throughout the thesis, and finally cover jet physics: the anti-kT clustering algorithm, large-R jets, and soft-drop mass, which are the objects at the heart of large-R jet tagging.
+-->
+
 ---
 
 # Standard Model
@@ -21,6 +25,10 @@ History
 7. Formulation of quantum chromodynamics (QCD) in the 1960s and 1970s, describing strong interaction.
 8. Explanation of particle mass acquisition through spontaneous symmetry breaking in gauge theories with Higgs mechanisms in the 1960s.
 9. Introduction of the Standard Model (SM), a comprehensive theory unifying all known elementary particles and forces except for gravity.
+
+<!-- 
+The Standard Model was not built overnight — it emerged over decades of theoretical insight and experimental discovery. Starting from Thomson's electron in the 19th century, physicists progressively uncovered the substructure of matter: the nucleus, the neutron, quantum mechanics, and quantum field theory. The culmination was the Yang-Mills non-Abelian gauge framework, QCD for the strong force, electroweak unification, and the Higgs mechanism explaining mass generation — all confirmed by experiment, most recently with the Higgs boson discovery at the LHC in 2012.
+-->
 
 ---
 layout: two-cols
@@ -46,6 +54,10 @@ Key components of SM
 <img border="rounded" src="/part_I/sm.png" alt=""/>
 </div>
 
+<!-- 
+The Standard Model contains two main categories of particles. The force carriers — gauge bosons — include the photon mediating electromagnetism, the W± and Z bosons mediating the weak force, and the gluon mediating the strong force. The matter particles — fermions — are divided into quarks (which feel all three forces) and leptons (which do not feel the strong force), organized in three generations of increasing mass. The Higgs boson is the unique scalar particle responsible for giving mass to W/Z bosons and fermions through the Higgs mechanism. The figure shows the full particle content of the SM organized by type and generation.
+-->
+
 ---
 
 # Standard Model
@@ -63,6 +75,10 @@ $$
 - The third term characterizes the Yukawa coupling, and it describes the interaction of the fermion fields with the Higgs field
 - The fourth term is the Higgs interaction with the boson field
 - The fifth term is the Higgs field potential
+
+<!-- 
+The entire Standard Model is encoded in a single Lagrangian density invariant under the SU(3)×SU(2)×U(1) gauge symmetry group. The first term describes the dynamics of the gauge fields themselves — the kinetic and self-interaction terms for gluons and electroweak bosons. The second term couples fermions to these gauge fields, encoding how quarks and leptons interact via the fundamental forces. The Yukawa coupling term (third) describes how fermions interact with the Higgs field and acquire mass after symmetry breaking. The last two terms define the Higgs field dynamics and the famous "Mexican hat" potential that drives spontaneous symmetry breaking.
+-->
 
 ---
 layout: two-cols
@@ -84,6 +100,10 @@ We will use only relevant parts
 <img border="rounded" width="330" src="/part_I/full_l.jpg" alt=""/>
 </div>
 
+<!-- 
+The full expanded form of the SM Lagrangian makes explicit every interaction term. While we will not work through every term in this talk, the key point is that this single equation encodes all known particle physics — the interactions of quarks, leptons, gauge bosons, and the Higgs field. For this thesis, the most relevant pieces are the QCD sector (governing jet production and structure), the electroweak sector (governing W/Z/H production), and the Yukawa sector (specifically the charm quark coupling to the Higgs). We will focus on the parts most relevant to large-R jet physics throughout.
+-->
+
 ---
 
 <div class="flex-column">
@@ -96,6 +116,10 @@ We will use only relevant parts
 <img border="rounded" src="/part_I/diag.png" alt=""/>
 </div>
 </div>
+
+<!-- 
+This figure shows the fundamental interaction vertices of the Standard Model — the building blocks of all Feynman diagram calculations. Each vertex represents an elementary interaction: quark-gluon vertices (QCD), lepton-photon vertices (QED), quark-W boson vertices (charged current weak interactions), and Higgs-boson couplings. Understanding these vertices is essential because all LHC processes — from QCD multijet production (the dominant background) to Higgs production and decay — are computed by combining these building blocks. The strength of each vertex is determined by the corresponding coupling constant in the SM Lagrangian.
+-->
 
 ---
 
@@ -127,6 +151,10 @@ v
 \end{pmatrix}, \quad v = \sqrt{-\frac{\mu^2}{\lambda}}
 $$
 
+<!-- 
+The Higgs mechanism is the cornerstone of electroweak symmetry breaking. The Higgs field is a complex SU(2) doublet with four real degrees of freedom. The key feature of the Higgs potential is that the parameter μ² is negative, which means the potential minimum — the vacuum — does not occur at φ=0 but on a "Mexican hat" ring at |φ| = v/√2, where v ≈ 246 GeV is the vacuum expectation value. The system spontaneously picks a vacuum on this ring, breaking the SU(2)×U(1) symmetry to the U(1) of electromagnetism. This spontaneous symmetry breaking generates the masses of the W and Z bosons, as we will see on the next slide.
+-->
+
 ---
 
 # Standard Model
@@ -151,6 +179,10 @@ $$
 
 $h$ is a physical Higgs boson (single scalar field degree of freedom) $m_H = v\sqrt{2\lambda}$.
 
+<!-- 
+Expanding the Higgs field around the vacuum expectation value reveals the physical content of symmetry breaking. Three of the four Higgs degrees of freedom (φ₁⁺, φ₂⁺, and a⁰) are Goldstone bosons that are absorbed as the longitudinal polarizations of the W± and Z bosons — this is how they acquire their masses, proportional to the gauge couplings times v. The fourth degree of freedom, h, is the observable Higgs boson with a mass mH = v√(2λ). The masses of the W and Z at tree level accurately predict their experimentally measured values, providing one of the most striking confirmations of the Higgs mechanism.
+-->
+
 ---
 
 # Standard Model
@@ -170,6 +202,10 @@ Part IV in this
 dissertation focuses on the measurement of the Yukawa coupling between the Higgs boson
 and the charm quark, $y_c$.
 
+<!-- 
+Fermion masses arise from the Yukawa interactions between the fermion fields and the Higgs field after electroweak symmetry breaking. Each fermion mass is proportional to its Yukawa coupling yf times the vacuum expectation value v. This means that heavier fermions couple more strongly to the Higgs boson — the top quark has the largest Yukawa coupling (~1), while lighter fermions like the charm quark have much smaller couplings. Part IV of the thesis targets the measurement of the Higgs-charm Yukawa coupling yc — one of the smallest accessible at the LHC — which tests the SM prediction that the Higgs couples to all fermions in proportion to their mass.
+-->
+
 ---
 
 # LHC Higgs Boson Production
@@ -185,6 +221,10 @@ The emitted vector boson can provide a triggering of the Higgs boson to facilita
 discussed in Part IV;
 - **Higgs boson production associated with a top quark-antiquark pair $\left( t\bar tH \right)$** (d). The $t\bar tH$ process involves the Higgs boson production in association with a top quark-antiquark pair. It is notable for its lower cross section owing to the substantial
 mass of the resulting particles.
+
+<!-- 
+At the LHC, the Higgs boson is produced through four main mechanisms, each with different cross sections and experimental signatures. Gluon fusion dominates (~88% of the total) but occurs through a top quark loop, making it sensitive to new physics. Vector boson fusion produces a Higgs with two forward jets as a distinctive signature. Associated production with a W or Z boson — the VH channel — is the focus of Part IV of this thesis, because the vector boson provides a clean trigger and the associated jets from V→qq allow mass reconstruction. Each production mode has different sensitivity to Higgs couplings and plays a complementary role in the LHC Higgs program.
+-->
 
 ---
 
@@ -202,6 +242,10 @@ mass of the resulting particles.
 	* Decay into massless particles, including gluons and photons, through a loop-induced process.
 	* Higgs boson to gg decay takes up considerable proportion but direct measurement is difficult.
 	* Higgs boson decaying to diphoton (Higgs to $\gamma\gamma$) provides clear modelling of a peak structure on the diphoton invariant mass and is a golden channel to probe the Higgs boson at LHC.
+
+<!-- 
+The Higgs boson decays through several channels with very different experimental challenges. Decays to W/Z boson pairs offer clean signatures (especially H→ZZ→4ℓ) but are suppressed by the virtual boson propagator below threshold. Decays to heavy fermions (H→bb̄, H→τ+τ-) dominate the branching fraction but are hard to isolate from QCD backgrounds — H→bb̄ with BR~58% is particularly important and is one of the targets of this thesis. Loop-induced decays to photon pairs, though rare, provide the cleanest experimental signature. The H→cc̄ channel with BR~2.9% is the decay targeted in Part IV, representing the first direct probe of second-generation quark Yukawa couplings.
+-->
 
 ---
 
@@ -606,6 +650,10 @@ layout: section
 
 ## Chapter 2. Deep Learning
 
+<!-- 
+Chapter 2 transitions from physics foundations to the deep learning toolkit used throughout the thesis. We will cover the basics of neural networks as applied to jet physics, and then focus on the public benchmark datasets used to evaluate jet tagging algorithms: the Top tagging dataset, the quark-gluon dataset, and the large-scale JetClass dataset. These datasets provide standardized benchmarks that allow fair comparison across the many algorithms discussed in Part II, and they also highlight the role of DELPHES fast simulation in enabling phenomenological studies without full CMS detector simulation.
+-->
+
 ---
 
 # HEP Datasets
@@ -648,6 +696,10 @@ Top tagging dataset
 * Jets clustered with anti-kT algorithm (R = 0.8)
 * Includes kinematics information of jet constituents with up to 200 highest pT constituents
 
+<!-- 
+The Top tagging dataset is the primary benchmark used for evaluating large-R jet tagging algorithms. It consists of equal numbers of hadronic top quark jets (signal) and QCD multijet jets (background), both generated with PYTHIA8 and processed through DELPHES. With 2M jets in total and a jet radius of R=0.8, it captures the three-prong structure of t→bqq decays. This dataset has been used to compare essentially every major jet tagging algorithm in the literature, making it the standard "leaderboard" for the field.
+-->
+
 ---
 
 # Jet Tagging Datasets
@@ -660,6 +712,10 @@ Quark-gluon tagging dataset
 * Includes kinematics information of jet constituents and particle identification (PID) information
 * PID varies from 8 types, including electrons, muons, photons, charged hadrons, and neutral hadrons
 
+<!-- 
+The quark-gluon dataset focuses on the discrimination between quark-initiated and gluon-initiated small-R jets (AK4, R=0.4). This is a simpler but important tagging task: quark jets tend to be narrower and have fewer constituents than gluon jets. The dataset includes particle identification information — distinguishing electrons, muons, photons, charged hadrons, and neutral hadrons — which provides additional discriminating power beyond kinematics alone. Quark-gluon tagging is relevant for many LHC analyses that need to reject or select specific jet types.
+-->
+
 ---
 
 # Jet Tagging Datasets
@@ -671,6 +727,10 @@ JetClass dataset
 * Generated by MG for resonance production and decay, then PYTHIA v8 for parton showering and DELPHES for detector simulation
 * Jets clustered with R = 0.8 and input features include kinematics information, particle identification flags, and trajectory displacement features
 4. Recommended metrics for JetClass dataset: binary background rejection evaluating the ability to separate two certain classes (S vs B) using a discriminant score(A) / (score(A) + score(B)).
+
+<!-- 
+The JetClass dataset is the largest and most diverse public jet tagging benchmark, introduced alongside the Particle Transformer paper. With 140M jets spanning ten classes — including all major Higgs decay modes (H→bb̄, H→cc̄, H→gg, H→4q, H→τν), top quark decays, W/Z bosons, and QCD jets — it enables both multi-class classification and fine-grained binary discrimination studies. Crucially, its large size (100M training jets) allows investigation of scaling behavior: how performance improves with more data. This is the dataset on which ParT most dramatically outperforms earlier models, demonstrating the data-hungry nature of Transformer architectures.
+-->
 
 ---
 
@@ -686,3 +746,6 @@ Detailed Comparison
 <img border="rounded" src="/part_I/datasets.png" alt=""/>
 </div>
 </div>
+<!-- 
+This table provides a side-by-side comparison of the three benchmark datasets. Key differences include the jet radius (R=0.4 for QG vs R=0.8 for Top and JetClass), the number of classes (binary for Top and QG vs ten-class for JetClass), the dataset size (JetClass is ~50× larger than Top), and the available input features (JetClass includes trajectory displacement features not present in the others). This diversity of benchmarks is important for evaluating whether algorithmic improvements generalize across different jet types, radii, and classification tasks — a key concern when claiming a method is a genuine advance for the field.
+-->
