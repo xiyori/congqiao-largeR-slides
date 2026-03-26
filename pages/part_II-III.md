@@ -27,6 +27,9 @@ relations among the input features and different particles.
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Rule-based Algorithms
 
 Jet grooming
@@ -38,6 +41,12 @@ Jet grooming
   - Declusters the jet and removes subjets failing a soft radiation criterion
   - Can be combined with multivariate analysis or likelihood fit for signal extraction
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.1.png" alt=""/>
+</div>
+</div>
+
 <!--
 Jet grooming techniques, initiated a decade ago, particularly aid in mass reconstruction
 when the large-R jet is initiated from a resonance. These techniques aim to remove
@@ -45,6 +54,9 @@ soft emissions within a jet that come from the pileup or underlying events.
 -->
 
 ---
+
+<div class="flex-column">
+<div>
 
 # Rule-based Algorithms
 
@@ -63,7 +75,16 @@ $$\tau_N = \frac{1}{d_0} \sum_{i=1}^{M} p_{T,i} \min\{\Delta R_{i,\text{sj}_1}, 
   - Generalized ECF ratios (e.g. $N_2$) widely used for 2-prong jet tagging in CMS
   - Can be combined in multivariate approach for better discrimination
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.2.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div>
 
 # Rule-based Algorithms
 
@@ -76,6 +97,12 @@ Heavy-flavour jet properties
   - **Soft leptons**: nonprompt low-$p_T$ leptons from $b/c$ hadron decays
 * CMS algorithms (JP, JBP) use track impact parameter to build jet $b$-probability
 * These techniques extend to large-$R$ jets for tagging $H \to bb$ or $H \to cc$ signatures
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.3.png" alt=""/>
+</div>
+</div>
 
 ---
 
@@ -91,6 +118,9 @@ Multivariate approaches combining high-level features
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Deep Learning Algorithms
 
 Jet representation of images and sequences
@@ -103,7 +133,24 @@ Jet representation of images and sequences
   - Jet images are sparse — many empty pixels
   - Sequential representations require a predefined ordering, conflicting with the inherent permutation symmetry of jet particles
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.4.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.5.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # Deep Learning Algorithms
 
@@ -116,6 +163,12 @@ Jet representation of sets and graphs
   - Efficiently extracts local features through EdgeConv operations
   - Achieves major performance gains in CMS for $W/Z/H/t$ and $X \to bb/cc$ tagging
 * ParticleNet marks a turning point: **the choice of data representation is critical** for efficient and performant DNN design
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_3.6.png" alt=""/>
+</div>
+</div>
 
 ---
 layout: section
@@ -144,6 +197,9 @@ within the network design, and the advances driven by the new architecture, Tran
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Algorithms Preserving Lorentz Symmetry
 
 Symmetry preservation as inductive bias
@@ -161,7 +217,16 @@ Symmetry preservation as inductive bias
 | $z$-tilt | mixture of $z$-$t$ boost with $x$-$z$ rotation |
 | $y$-tilt | mixture of $y$-$t$ boost with $y$-$z$ rotation |
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.1.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div>
 
 # LorentzNet
 
@@ -175,7 +240,16 @@ Architecture: Lorentz Group Equivariant Block (LGEB)
 * 6 stacked LGEBs, followed by average pooling and MLP decoder
 * By construction, outputs are invariant to all Lorentz transformations
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.2.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div>
 
 # LorentzNet
 
@@ -186,6 +260,12 @@ Performance and robustness
 * Demonstrates **robustness** to Lorentz boosts: accuracy remains constant when input jets undergo $x$-$t$ boost with parameter $\beta = v/c$, while other models (ParticleNet, PFN) show performance drops
 * On JetClass (100 M samples), LorentzNet accuracy = 0.855, outperforming ParticleNet (0.844) and ParT-plain (0.849)
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.3.png" alt=""/>
+</div>
+</div>
+
 <!--
 The performance of LorentzNet is benchmarked on the Top and QG datasets. It achieves
 superior performance, surpassing ParticleNet by a large margin. In addition, as LorentzNet
@@ -194,6 +274,9 @@ constant when jets undergo a Lorentz boost, while other algorithms manifest a pe
 -->
 
 ---
+
+<div class="flex-column">
+<div>
 
 # Systematic Study: Preserving Lorentz Symmetry
 
@@ -212,7 +295,40 @@ Pairwise variables and their symmetry invariance:
 * Effect is **strongest with limited training data** — symmetry acts as effective data augmentation
 * Confirmed on both Top and JetClass datasets across training sizes from 6k to 100M
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.4.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.5.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.6.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Table_4.3.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # The Transformer Algorithm
 
@@ -232,7 +348,16 @@ Why Transformers for jet tagging?
 | ParT | 2M | 0.836 | 5587 |
 | ParT | 100M | **0.861** | **10638** |
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Table_4.4.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div>
 
 # Particle Transformer (ParT)
 
@@ -248,7 +373,24 @@ Architecture overview
 * Modified attention: $\text{P-MHA}(Q, K, V, U) = \text{softmax}\left(\frac{QK^T}{\sqrt{d}} + U\right) V$
   - $U$ is the embedded pairwise feature matrix — provides Lorentz-symmetry inductive bias
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.8.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_4.7.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # Particle Transformer (ParT)
 
@@ -265,6 +407,20 @@ Performance comparison
 * ParT achieves **highest performance** with **moderate computational cost**
 * ParT has 6× more parameters than ParticleNet but **similar FLOPs** — efficient Transformer design
 * LorentzNet achieves high accuracy but with ~6× higher FLOPs than ParT due to fully-connected GNN
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Table_4.5.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Table_4.6.png" alt=""/>
+</div>
+</div>
 
 ---
 
@@ -305,6 +461,9 @@ $$\text{SF} = \frac{\epsilon_{\text{data}}}{\epsilon_{\text{MC}}}$$
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Overview of Boosted-jet Flavour Taggers
 
 Target: identify large-$R$ jets from $X \to bb$ or $X \to cc$ decays
@@ -324,7 +483,32 @@ Four $X \to bb/cc$ taggers in CMS:
 
 * ParticleNet-MD shows **largely enhanced** separating power versus QCD background
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_5.1.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_5.2.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.1.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # Calibration Challenge
 
@@ -340,6 +524,12 @@ Two proxy approaches:
 2. **$Z \to bb$ jets**: more direct proxy, but fewer statistics and larger SF uncertainties due to non-resonant hadronic background
 
 → **Challenge**: a more performant tagger better discriminates $g \to bb$ from $H \to bb$, making gluon-splitting proxies less suitable
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.2.png" alt=""/>
+</div>
+</div>
 
 ---
 layout: section
@@ -366,6 +556,9 @@ Key idea: multivariate selection of signal-like gluon-splitting jets
 
 ---
 
+<div class="flex-column">
+<div>
+
 # The sfBDT Method
 
 Data and simulated samples
@@ -375,6 +568,20 @@ Data and simulated samples
 * **MC samples**: QCD multijet (dominant), $V(\to qq)$+jets, $t\bar{t}$, single top
 * **Key**: use same PYTHIA parton shower generator for both $H \to bb/cc$ signal and $g \to bb/cc$ proxy jets — DNN performance is sensitive to parton shower patterns
 * **MC-to-data reweighting**: 3D grid on (event $H_T$, jet $p_T$, jet index) to compensate for trigger prescaling effects
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.3.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.4.png" alt=""/>
+</div>
+</div>
 
 ---
 
@@ -400,6 +607,9 @@ Jet flavour categories (ghost-matching):
 
 ---
 
+<div class="flex-column">
+<div>
+
 # sfBDT Design
 
 Generation 1: parton-level gluon contamination
@@ -414,7 +624,32 @@ $$\kappa_g = \frac{\sum_{i \in \{g\}} p_{T,i}}{\sum_{i \in \{g,q\}} p_{T,i}}$$
 * **10-fold cross-validation** to avoid overfitting
 * Tighter sfBDT selection → proxy jets more signal-like
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.5.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.6.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.7.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # sfBDT Design
 
@@ -431,7 +666,16 @@ $$\tau_{31}^h = \frac{\sum_{i \in \text{had.}} p_{T,i} \min[\Delta R_{i,\hat{n}_
 * **Advantages**: uses hadron-level physics (more generator-independent), captures both gluon and quark extra radiation
 * Implemented in Run-2 published calibration results (Ref. [124])
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.8.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div>
 
 # sfBDT Coastlines
 
@@ -448,7 +692,32 @@ $$F_y(x, y) = \int_y^1 f(x, y') \,dy'$$
 * **Key property**: for each coastline, the selected proxy jet collection has the **same tagger discriminant shape** as the signal jets (uniform distribution)
 * 9 coastlines × 9 "coast number" options = **81 SF measurements** per working point
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.9.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.10.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.11.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # Scale Factor Derivation
 
@@ -463,7 +732,56 @@ Template maximum likelihood fit
   - 3 $p_T$ bins: (450, 500), (500, 600), (600, ∞) GeV
 * **Systematic uncertainties**: jet energy scale/resolution, $b/c$ tagging, pileup, plus dedicated **sfBDT coastline variation** uncertainty
 
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.13.png" alt=""/>
+</div>
+</div>
+
 ---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.14.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.15.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.16.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.18.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.19.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div>
 
 # Calibration Results
 
@@ -481,6 +799,28 @@ Scale factors for ParticleNet-MD $X \to bb$ and $X \to cc$
 * **Derived SFs are around unity** — confirms simulation-to-data consistency for ParticleNet-MD
 * Results are part of **published CMS results** (CMS-PAS-BTV-22-001)
 * sfBDT SFs applied in **numerous CMS analyses** including the VHcc measurement (Part IV)
+
+</div>
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.21.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.22.png" alt=""/>
+</div>
+</div>
+
+---
+
+<div class="flex-column">
+<div class="center-container">
+<img border="rounded" src="/part_II-III/Figure_6.24.png" alt=""/>
+</div>
+</div>
 
 ---
 
