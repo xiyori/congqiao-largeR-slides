@@ -361,8 +361,8 @@ Combination with resolved-jet analysis
 |---|---|
 | Best-fit $\mu_{VH \to c\bar c}$ | $7.7^{+3.8}_{-3.5}$ |
 | Observed (expected) 95% CL upper limit | 14 (7.6) |
-| $\kappa_c$ constraint (observed 95% CL) | $1.1 < |\kappa_c| < 5.5$ |
-| $\kappa_c$ constraint (expected) | $|\kappa_c| < 3.4$ |
+| $\kappa_c$ constraint (observed 95% CL) | $1.1 < \|\kappa_c\| < 5.5$ |
+| $\kappa_c$ constraint (expected) | $\|\kappa_c\| < 3.4$ |
 
 * **Strongest direct constraint** on the Higgs-charm Yukawa coupling at the time
 * $VZ \to c\bar c$ combined: $\mu = 1.01^{+0.23}_{-0.21}$, significance = **5.7$\sigma$** → first observation of $Z \to c\bar c$
@@ -775,11 +775,14 @@ The Sophon model uses the Particle Transformer architecture with 2.3M parameters
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Sophon: Direct Tagging
 
 $X \to b\bar b$ tagging surpasses dedicated ParT and ParticleNet trainings
 
-<div class="flex-column">
+</div>
 <div class="center-container">
 <img border="rounded" src="/part_IV-V/Figure_13.2.png" alt=""/>
 </div>
@@ -791,11 +794,14 @@ The Sophon model's direct X→bb̄ tagging performance (top panel) surpasses ded
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Sophon: Transfer Learning
 
 $X \to b\bar s$ tagging — a novel class not in pre-training
 
-<div class="flex-column">
+</div>
 <div class="center-container">
 <img border="rounded" src="/part_IV-V/Figure_13.3.png" alt=""/>
 </div>
@@ -807,11 +813,14 @@ The transfer learning capability of Sophon is demonstrated on the X→bs̄ taggi
 
 ---
 
+<div class="flex-column">
+<div>
+
 # Implications for LHC Resonance Searches
 
 Sophon enables three novel search strategies
 
-<div class="flex-column">
+</div>
 <div class="center-container">
 <img border="rounded" src="/part_IV-V/Figure_13.4.png" alt=""/>
 </div>
